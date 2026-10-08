@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #ddd;
+}
+
+.phone {
+  width: 300px;
+  margin: 20px auto;
+  background: #102c4a;
+  color: white;
+  min-height: 620px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Album */
+.album {
+  text-align: center;
+  padding: 10px;
+}
+
+.album h2 {
+  font-size: 18px;
+}
+
+.album p {
+  font-size: 10px;
+  margin: 5px;
+}
+
+/* Cover */
+.album-cover {
+  width: 180px;
+  height: 120px;
+  background: #f0dce8;
+  margin: 10px auto;
+  position: relative;
+}
+
+.cover-design {
+  width: 130px;
+  height: 120px;
+  background: #8ed5d2;
+}
+
+.disc {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Tracks */
+.tracks {
+  border-top: 1px solid #aaa;
+  padding: 10px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.track b {
+  display: block;
+  font-size: 10px;
+}
+
+.track small {
+  font-size: 8px;
+}
+
+.track-icons {
+  font-size: 14px;
+}
+
+/* Player */
+.player {
+  border-top: 1px solid #aaa;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  width: 300px;
+  background: #102c4a;
+}
+
+.bar {
+  height: 3px;
+  background: white;
+  width: 30%;
+}

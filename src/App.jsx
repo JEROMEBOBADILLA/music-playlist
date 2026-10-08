@@ -1,121 +1,124 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import './style.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const songs = [
+    {
+      title: "Ikot",
+      artist: "Over October",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150",
+    },
+    {
+      title: "Tayong dalawa",
+      artist: "Harmonica Band, Monica",
+    },
+    {
+      title: "Palagi",
+      artist: "TJ Monterde",
+    },
+    {
+      title: "Bawat Daan",
+      artist: "Ebe Dancel",
+    },
+    {
+      title: "kalapastanganan",
+      artist: "fitterkarma",
+    },
+    {
+      title: "Dream Girl",
+      artist: "kolohe Kai",
+    },
+    {
+      title: "Mahika",
+      artist: "Adie & Janine Teñoso",
+    },
+  ]
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="phone">
 
-      <div className="ticks"></div>
+      {/* Header */}
+      <div className="header">
+        <span className="back">◀</span>
+        <span className="header-title">ALBUM TRACKS</span>
+        <span className="menu">☰</span>
+      </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* Album Name */}
+      <div className="album-info">
+        <h2>912 Album</h2>
+        <p>Lorem ft. Ipsum</p>
+      </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {/* Album Cover */}
+      <div className="album">
+        <div className="cd">
+          <div className="cd-hole"></div>
+        </div>
+
+        <div className="cover">
+          <div className="shape shape1"></div>
+          <div className="shape shape2"></div>
+          <div className="shape shape3"></div>
+          <div className="shape shape4"></div>
+        </div>
+      </div>
+
+      {/* Track List */}
+      <div className="track-list">
+        {songs.map((song, index) => (
+          <div className="track" key={index}>
+
+            <div className="track-info">
+
+              {/* Picture ng naka-play na Ikot */}
+              {song.title === "Ikot" && (
+                <img
+                  src={song.image}
+                  alt={song.title}
+                  className="track-picture"
+                />
+              )}
+
+              <div>
+                <b>{song.title}</b>
+                <small>{song.artist}</small>
+              </div>
+
+            </div>
+
+            <div className="icons">
+              <span>☆</span>
+              <span>⊘</span>
+              <span>≡</span>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+      {/* Music Progress */}
+      <div className="music-bar">
+        <div className="line">
+          <div className="progress"></div>
+          <div className="circle"></div>
+        </div>
+      </div>
+
+      {/* Android Bottom Navigation */}
+      <div className="bottom">
+
+        {/* Back */}
+        <span className="back"></span>
+
+        {/* Home */}
+        <span className="home"></span>
+
+        {/* Recent */}
+        <span className="recent"></span>
+
+      </div>
+
+    </div>
   )
 }
 
