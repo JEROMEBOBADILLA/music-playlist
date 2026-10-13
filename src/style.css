@@ -1,18 +1,24 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #ddd;
+
+  /* Center ang phone sa screen */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .phone {
   width: 300px;
   margin: 20px auto;
-  background: #102c4a;
+  background: #02060a;
   color: white;
   min-height: 620px;
 }
@@ -37,6 +43,7 @@ body {
 
 .album h2 {
   font-size: 18px;
+  text-align: center;
 }
 
 .album p {
@@ -101,7 +108,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 300px;
-  background: #102c4a;
+  background: #184f8a;
 }
 
 .bar {
@@ -109,3 +116,18 @@ body {
   background: white;
   width: 30%;
 }
+ .album-info > h2{
+  justify-content: center;
+  display: flex;
+ }
+
+ .album-info > p {
+  justify-content: center;
+  display: flex;
+ }
+
+ album-info >  {
+  justify-content: center;
+  display: flex;
+ }
+
